@@ -7,7 +7,6 @@ class TestRunner {
 
     @Test
     void testParallel() {
-        // "classpath:features" fará o Karate rodar tudo dentro dessa pasta
         Results results = Runner.path("classpath:features")
                 .outputHtmlReport(true)
                 .parallel(1);

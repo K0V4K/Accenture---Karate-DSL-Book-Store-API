@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"features\/account[1:9]","start":1768182129231,"end":1768182135130,"title":"features\/account[1:9] 22:42:09.231-22:42:15.130 Validar exclusão de usuário com sucesso"},{"id":2,"group":1,"content":"features\/account[2:15]","start":1768182135134,"end":1768182138442,"title":"features\/account[2:15] 22:42:15.134-22:42:18.442 Tentar deletar usuário sem autorização (Falha)"},{"id":3,"group":1,"content":"features\/bookstore[1:9]","start":1768182138977,"end":1768182144925,"title":"features\/bookstore[1:9] 22:42:18.977-22:42:24.925 Gerenciar livros no perfil com sucesso"},{"id":4,"group":1,"content":"features\/bookstore[2.1:38]","start":1768182144931,"end":1768182148644,"title":"features\/bookstore[2.1:38] 22:42:24.931-22:42:28.644 Validar busca de livro por ISBN"},{"id":5,"group":1,"content":"features\/bookstore[2.2:39]","start":1768182148649,"end":1768182151526,"title":"features\/bookstore[2.2:39] 22:42:28.649-22:42:31.526 Validar busca de livro por ISBN"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
