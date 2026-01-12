@@ -131,6 +131,17 @@ Src -> Test -> Java -> TestRunner.java ->  Botão direito do mouse Run "TestRunn
 
 ---
 
+---
+
+## Resultado Esperado
+
+Abaixo, o relatório consolidado gerado pelo **Karate Reports**, demonstrando a execução bem-sucedida de todos os cenários de teste automatizados para a BookStore API.
+
+<div align="center">
+  <img src="Assets/Relatorio.png" alt="Relatório de Testes Karate" width="100%">
+  <p><i>Dashboard de execução: 5 cenários validados com 100% de aproveitamento.</i></p>
+</div>
+
 <div align="center">
 
 > "A automação não é sobre substituir humanos, mas sobre dar superpoderes a eles."
